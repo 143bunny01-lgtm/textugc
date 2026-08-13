@@ -1,117 +1,603 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#5d6040">
-<meta name="description" content="Prasanna's handpicked beauty, fashion and lifestyle finds. Discover, love and shop.">
+
 <title>Prasanna | Discover • Love • Shop</title>
+
 <style>
-:root{--olive:#5d6040;--brown:#a95f32;--cream:#f8f3e8;--soft:#eee9dc;--text:#29291f;--white:#fffdf8}
-*{box-sizing:border-box}
-body{margin:0;background:var(--cream);color:var(--text);font-family:Arial,Helvetica,sans-serif}
-.page{max-width:560px;margin:auto;padding:20px 15px 38px}
-.hero{text-align:center;padding:10px 8px 7px}
-.avatar{width:88px;height:88px;border-radius:50%;margin:auto;background:linear-gradient(135deg,var(--olive),var(--brown));display:grid;place-items:center;color:white;font-size:31px;font-weight:800;border:5px solid var(--white);box-shadow:0 5px 20px #0002}
-h1{margin:13px 0 3px;font-size:28px}.handle{font-weight:700;color:var(--olive)}
-.tagline{font-size:16px;line-height:1.45;margin:8px 0 16px}
-.socials a{display:inline-block;text-decoration:none;color:var(--olive);background:var(--white);border:1px solid #ddd6c7;border-radius:999px;padding:10px 18px;font-weight:800}
-.section-title{margin:27px 3px 11px;font-size:14px;letter-spacing:1.5px;color:var(--olive);font-weight:900;text-transform:uppercase}
-.product{display:block;background:var(--white);border:1px solid #e2dccd;border-radius:19px;overflow:hidden;margin:12px 0;text-decoration:none;color:var(--text);box-shadow:0 5px 18px #0000000b}
-.product img{width:100%;height:220px;object-fit:cover;display:block}
-.product-body{padding:15px 16px 16px}
-.pill{display:inline-block;font-size:9px;letter-spacing:1px;font-weight:900;color:var(--olive);background:#ecebdd;padding:5px 8px;border-radius:999px}
-.product h3{font-size:17px;line-height:1.25;margin:9px 0 6px}
-.desc{font-size:13px;color:#777;margin:0 0 10px;line-height:1.4}
-.price{display:flex;align-items:baseline;gap:8px;margin-bottom:11px}.price strong{font-size:22px}.old{text-decoration:line-through;color:#999;font-size:13px}.offer{color:#168064;font-size:12px;font-weight:800}
-.meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;margin-bottom:12px}.rating{background:#168064;color:white;padding:5px 8px;border-radius:999px;font-weight:800}
-.shop{display:block;text-align:center;background:var(--brown);color:white;border-radius:12px;padding:12px;font-weight:900}
-.out{opacity:.78}.out .shop{background:#888;pointer-events:none}.stock{color:#b3261e;font-weight:800;font-size:12px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
-.card{background:var(--white);border:1px solid #e2dccd;border-radius:18px;padding:17px 10px;text-align:center;text-decoration:none;color:var(--text);box-shadow:0 5px 18px #0000000b}
-.icon{font-size:29px;margin-bottom:7px}.card b{display:block;font-size:15px}.card span{font-size:12px;color:#777}
-.feature{background:var(--olive);color:white;border-radius:19px;padding:19px;margin-top:23px}.feature h3{margin:0 0 6px;font-size:19px}.feature p{margin:0 0 14px;font-size:13px;opacity:.9}
-.button{display:inline-block;background:#fff7e9;color:var(--olive);padding:11px 16px;border-radius:999px;text-decoration:none;font-weight:900}
-.note{text-align:center;margin:27px 0 10px;font-size:13px;color:#777}.footer{text-align:center;font-size:12px;color:#777}
-.disclosure{font-size:10px;color:#8a877c;text-align:center;line-height:1.4;margin-top:16px}
+:root{
+  --olive:#5d6040;
+  --brown:#a95f32;
+  --cream:#f8f3e8;
+  --text:#29291f;
+  --white:#fffdf8;
+  --green:#168064;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+.page{
+  max-width:560px;
+  margin:auto;
+  padding:20px 15px 40px;
+}
+
+/* HEADER */
+
+.hero{
+  text-align:center;
+  padding:10px 8px 7px;
+}
+
+.avatar{
+  width:88px;
+  height:88px;
+  border-radius:50%;
+  margin:auto;
+  background:linear-gradient(135deg,var(--olive),var(--brown));
+  display:grid;
+  place-items:center;
+  color:white;
+  font-size:31px;
+  font-weight:800;
+  border:5px solid var(--white);
+  box-shadow:0 5px 20px #0002;
+}
+
+h1{
+  margin:13px 0 3px;
+  font-size:28px;
+}
+
+.handle{
+  font-weight:700;
+  color:var(--olive);
+}
+
+.tagline{
+  font-size:16px;
+  line-height:1.45;
+  margin:8px 0 16px;
+}
+
+.instagram{
+  display:inline-block;
+  text-decoration:none;
+  color:var(--olive);
+  background:var(--white);
+  border:1px solid #ddd6c7;
+  border-radius:999px;
+  padding:11px 20px;
+  font-weight:800;
+}
+
+.shop-intro{
+  text-align:center;
+  background:#ecebdd;
+  color:var(--olive);
+  border-radius:999px;
+  padding:10px;
+  margin:10px 18px 5px;
+  font-size:12px;
+  font-weight:800;
+}
+
+/* SECTION */
+
+.section-title{
+  margin:28px 3px 12px;
+  font-size:14px;
+  letter-spacing:1.5px;
+  color:var(--olive);
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+/* PRODUCTS */
+
+.product{
+  display:block;
+  background:var(--white);
+  border:1px solid #e2dccd;
+  border-radius:19px;
+  overflow:hidden;
+  margin:13px 0;
+  text-decoration:none;
+  color:var(--text);
+  box-shadow:0 5px 18px #0000000b;
+}
+
+.product img{
+  width:100%;
+  height:205px;
+  object-fit:cover;
+  display:block;
+}
+
+.product-body{
+  padding:16px;
+}
+
+.pill{
+  display:inline-block;
+  font-size:9px;
+  letter-spacing:1px;
+  font-weight:900;
+  color:var(--olive);
+  background:#ecebdd;
+  padding:6px 9px;
+  border-radius:999px;
+}
+
+.product h3{
+  font-size:17px;
+  line-height:1.3;
+  margin:9px 0 6px;
+}
+
+.desc{
+  font-size:13px;
+  color:#777;
+  margin:0 0 10px;
+  line-height:1.4;
+}
+
+.price{
+  display:flex;
+  align-items:baseline;
+  gap:8px;
+  margin-bottom:11px;
+}
+
+.price strong{
+  font-size:23px;
+}
+
+.old{
+  text-decoration:line-through;
+  color:#999;
+  font-size:13px;
+}
+
+.offer{
+  color:var(--green);
+  font-size:12px;
+  font-weight:800;
+}
+
+.meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:12px;
+  margin-bottom:13px;
+}
+
+.rating{
+  background:var(--green);
+  color:white;
+  padding:5px 8px;
+  border-radius:999px;
+  font-weight:800;
+}
+
+.shop{
+  display:block;
+  text-align:center;
+  background:var(--brown);
+  color:white;
+  border-radius:12px;
+  padding:13px;
+  font-weight:900;
+}
+
+.stock{
+  color:#b3261e;
+  font-weight:800;
+  font-size:12px;
+}
+
+/* CATEGORY */
+
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:11px;
+}
+
+.card{
+  background:var(--white);
+  border:1px solid #e2dccd;
+  border-radius:18px;
+  padding:18px 10px;
+  text-align:center;
+  text-decoration:none;
+  color:var(--text);
+  box-shadow:0 5px 18px #0000000b;
+}
+
+.icon{
+  font-size:29px;
+  margin-bottom:7px;
+}
+
+.card b{
+  display:block;
+  font-size:15px;
+}
+
+.card span{
+  font-size:12px;
+  color:#777;
+}
+
+/* FOLLOW BOX */
+
+.feature{
+  background:var(--olive);
+  color:white;
+  border-radius:19px;
+  padding:20px;
+  margin-top:25px;
+}
+
+.feature h3{
+  margin:0 0 7px;
+  font-size:19px;
+}
+
+.feature p{
+  margin:0 0 15px;
+  font-size:13px;
+  line-height:1.5;
+  opacity:.9;
+}
+
+.follow{
+  display:inline-block;
+  background:#fff7e9;
+  color:var(--olive);
+  padding:12px 17px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:900;
+}
+
+.note{
+  text-align:center;
+  margin:27px 0 10px;
+  font-size:13px;
+  color:#777;
+}
+
+.disclosure{
+  font-size:10px;
+  color:#8a877c;
+  text-align:center;
+  line-height:1.4;
+  margin-top:15px;
+}
+
+.footer{
+  text-align:center;
+  font-size:12px;
+  color:#777;
+  margin-top:8px;
+}
 </style>
 </head>
+
 <body>
+
 <main class="page">
+
+<!-- PROFILE -->
+
 <header class="hero">
+
   <div class="avatar">P</div>
+
   <h1>Prasanna 💗</h1>
-  <div class="handle">@prasannaugccreator</div>
-  <div class="tagline">Discover. Love. Shop. 🛍️<br>Beauty • Fashion • Lifestyle</div>
-  <div class="socials"><a href="https://instagram.com/prasannaugccreator" target="_blank" rel="noopener">Instagram ↗</a></div>
+
+  <div class="handle">
+    @prasannaugccreator
+  </div>
+
+  <div class="tagline">
+    Discover. Love. Shop. 🛍️<br>
+    Beauty • Fashion • Lifestyle
+  </div>
+
+  <a
+    class="instagram"
+    href="https://instagram.com/prasannaugccreator"
+    target="_blank">
+    Instagram ↗
+  </a>
+
 </header>
 
-<div id="featured" class="section-title">✨ Featured finds</div>
+<div class="shop-intro">
+  ✨ Handpicked finds • Great prices • Easy shopping
+</div>
 
-<a class="product" href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168075?p_id=681418625&ext_id=b9p5z5&utm_source=instagram_stories" target="_blank" rel="noopener">
-  <img src="pearl-bag.jpg" alt="Pearl beaded clutch bag">
-  <div class="product-body">
-    <span class="pill">FASHION FIND</span><h3>Fancy Korean Designer Pearl Beaded Clutch</h3>
-    <p class="desc">Elegant pearl-detail bag for women & girls.</p>
-    <div class="price"><strong>₹200</strong><span class="old">₹340</span><span class="offer">41% OFF</span></div>
-    <div class="meta"><span class="rating">★ 4.3</span><span class="stock">Currently out of stock</span></div>
-    <span class="shop">CHECK AVAILABILITY →</span>
-  </div>
+
+<!-- PRODUCTS -->
+
+<div id="featured" class="section-title">
+  🔥 Shop Today's Finds
+</div>
+
+
+<!-- PRODUCT 1 -->
+
+<a
+class="product"
+href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168137?p_id=972719522&ext_id=g34r6q&utm_source=instagram_stories"
+target="_blank">
+
+<img
+src="laundry-bag.jpg"
+alt="Gray Black Laundry Bag">
+
+<div class="product-body">
+
+<span class="pill">
+🔥 BEST VALUE FIND
+</span>
+
+<h3>
+Gray Black Laundry Bag
+</h3>
+
+<p class="desc">
+Simple cloth organizer for keeping laundry tidy.
+</p>
+
+<div class="price">
+<strong>₹110</strong>
+<span class="old">₹232</span>
+<span class="offer">53% OFF</span>
+</div>
+
+<div class="meta">
+<span class="rating">★ 4.1</span>
+<span>2,220 ratings</span>
+</div>
+
+<span class="shop">
+SHOP NOW →
+</span>
+
+</div>
 </a>
 
-<a class="product" href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168075?p_id=681418625&ext_id=b9p5z5&utm_source=instagram_stories" style="display:none"></a>
 
-<a class="product" href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168137?p_id=972719522&ext_id=g34r6q&utm_source=instagram_stories" target="_blank" rel="noopener">
-  <img src="laundry-bag.jpg" alt="Gray black laundry bag">
-  <div class="product-body">
-    <span class="pill">LIFESTYLE FIND</span><h3>Gray Black Laundry Bag</h3>
-    <p class="desc">Simple cloth organizer for keeping laundry tidy.</p>
-    <div class="price"><strong>₹110</strong><span class="old">₹232</span><span class="offer">53% OFF</span></div>
-    <div class="meta"><span class="rating">★ 4.1</span><span>2,220 ratings</span></div>
-    <span class="shop">SHOP NOW →</span>
-  </div>
+<!-- PRODUCT 2 -->
+
+<a
+class="product"
+href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168229?p_id=208358024&ext_id=3g1u2w&utm_source=instagram_stories"
+target="_blank">
+
+<img
+src="study-lamp.jpg"
+alt="Rechargeable LED Study Lamp">
+
+<div class="product-body">
+
+<span class="pill">
+⭐ TOP RATED FIND
+</span>
+
+<h3>
+Rechargeable LED Touch Study Lamp
+</h3>
+
+<p class="desc">
+Flexible desk lamp with touch on/off control.
+</p>
+
+<div class="price">
+<strong>₹166</strong>
+<span class="old">₹306</span>
+<span class="offer">46% OFF</span>
+</div>
+
+<div class="meta">
+<span class="rating">★ 4.2</span>
+<span>7,326 ratings</span>
+</div>
+
+<span class="shop">
+SHOP NOW →
+</span>
+
+</div>
 </a>
 
-<a class="product" href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168229?p_id=208358024&ext_id=3g1u2w&utm_source=instagram_stories" target="_blank" rel="noopener">
-  <img src="study-lamp.jpg" alt="Rechargeable LED study lamp">
-  <div class="product-body">
-    <span class="pill">LIFESTYLE FIND</span><h3>Rechargeable LED Touch Study Lamp</h3>
-    <p class="desc">Flexible desk lamp with touch on/off control.</p>
-    <div class="price"><strong>₹166</strong><span class="old">₹306</span><span class="offer">46% OFF</span></div>
-    <div class="meta"><span class="rating">★ 4.2</span><span>7,326 ratings</span></div>
-    <span class="shop">SHOP NOW →</span>
-  </div>
+
+<!-- PRODUCT 3 -->
+
+<a
+class="product"
+href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168265?p_id=768602239&ext_id=cplta7&utm_source=instagram_stories"
+target="_blank">
+
+<img
+src="earring-holder.jpg"
+alt="Black Velvet Earring Holder">
+
+<div class="product-body">
+
+<span class="pill">
+💗 TRENDING FIND
+</span>
+
+<h3>
+Black Velvet Earring Holder
+</h3>
+
+<p class="desc">
+Jewellery organizer with 16 pairs of earring storage.
+</p>
+
+<div class="price">
+<strong>₹205</strong>
+<span class="old">₹350</span>
+<span class="offer">41% OFF</span>
+</div>
+
+<div class="meta">
+<span class="rating">★ 4.2</span>
+<span>Supplier rating</span>
+</div>
+
+<span class="shop">
+SHOP NOW →
+</span>
+
+</div>
 </a>
 
-<a class="product" href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168265?p_id=768602239&ext_id=cplta7&utm_source=instagram_stories" target="_blank" rel="noopener">
-  <img src="earring-holder.jpg" alt="Black velvet earring holder">
-  <div class="product-body">
-    <span class="pill">FASHION FIND</span><h3>Black Velvet Earring Holder</h3>
-    <p class="desc">Jewellery organizer with 16 pairs of earring storage.</p>
-    <div class="price"><strong>₹205</strong><span class="old">₹350</span><span class="offer">41% OFF</span></div>
-    <div class="meta"><span class="rating">★ 4.2</span><span>Supplier rating</span></div>
-    <span class="shop">SHOP NOW →</span>
-  </div>
+
+<!-- MORE FINDS -->
+
+<div class="section-title">
+  💗 More Finds
+</div>
+
+
+<!-- OUT OF STOCK PRODUCT -->
+
+<a
+class="product"
+href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168075?p_id=681418625&ext_id=b9p5z5&utm_source=instagram_stories"
+target="_blank">
+
+<img
+src="pearl-bag.jpg"
+alt="Pearl Beaded Clutch Bag">
+
+<div class="product-body">
+
+<span class="pill">
+FASHION FIND
+</span>
+
+<h3>
+Fancy Korean Designer Pearl Beaded Clutch
+</h3>
+
+<p class="desc">
+Elegant pearl-detail bag for women & girls.
+</p>
+
+<div class="price">
+<strong>₹200</strong>
+<span class="old">₹340</span>
+<span class="offer">41% OFF</span>
+</div>
+
+<div class="meta">
+<span class="rating">★ 4.3</span>
+<span class="stock">Currently out of stock</span>
+</div>
+
+<span class="shop">
+CHECK AVAILABILITY →
+</span>
+
+</div>
 </a>
 
-<div class="section-title">Shop by category</div>
+
+<!-- CATEGORIES -->
+
+<div class="section-title">
+  Shop By Category
+</div>
+
 <section class="grid">
-  <a class="card" href="#featured"><div class="icon">💄</div><b>Beauty Finds</b><span>Beauty picks</span></a>
-  <a class="card" href="#featured"><div class="icon">👗</div><b>Fashion Finds</b><span>Cute & affordable</span></a>
-  <a class="card" href="#featured"><div class="icon">🏠</div><b>Lifestyle Finds</b><span>Useful picks</span></a>
-  <a class="card" href="#featured"><div class="icon">🏷️</div><b>Budget Finds</b><span>Best-value picks</span></a>
+
+<a class="card" href="#featured">
+<div class="icon">💄</div>
+<b>Beauty Finds</b>
+<span>Beauty picks</span>
+</a>
+
+<a class="card" href="#featured">
+<div class="icon">👗</div>
+<b>Fashion Finds</b>
+<span>Cute & affordable</span>
+</a>
+
+<a class="card" href="#featured">
+<div class="icon">🏠</div>
+<b>Lifestyle Finds</b>
+<span>Useful picks</span>
+</a>
+
+<a class="card" href="#featured">
+<div class="icon">🏷️</div>
+<b>Budget Finds</b>
+<span>Best-value picks</span>
+</a>
+
 </section>
+
+
+<!-- FOLLOW -->
 
 <section class="feature">
-  <h3>💗 Don't miss the next best find!</h3>
-  <p>Follow for new finds, honest reviews, real-use videos and easy shopping links.</p>
-  <a class="button" href="https://instagram.com/prasannaugccreator" target="_blank" rel="noopener">FOLLOW ON INSTAGRAM</a>
+
+<h3>
+💗 Don't miss the next best find!
+</h3>
+
+<p>
+Follow for new finds, honest reviews,
+real-use videos and easy shopping links.
+</p>
+
+<a
+class="follow"
+href="https://instagram.com/prasannaugccreator"
+target="_blank">
+
+FOLLOW ON INSTAGRAM
+
+</a>
+
 </section>
 
-<div class="note">Good finds • Smart buys • Happy shopping 💗</div>
-<div class="disclosure">Some links may be affiliate links. Product prices and availability can change on the shopping platform.</div>
-<footer class="footer">© 2026 @prasannaugccreator</footer>
+
+<div class="note">
+Good finds • Smart buys • Happy shopping 💗
+</div>
+
+<div class="disclosure">
+Some links may be affiliate links.
+Product prices and availability can change on the shopping platform.
+</div>
+
+<footer class="footer">
+© 2026 @prasannaugccreator
+</footer>
+
 </main>
+
 </body>
 </html>
