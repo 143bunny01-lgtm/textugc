@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#5d6040">
-
+<meta name="description" content="Prasanna's handpicked beauty, fashion and lifestyle finds.">
 <title>Prasanna | Discover • Love • Shop</title>
 
 <style>
@@ -34,7 +34,7 @@ body{
   padding:20px 15px 40px;
 }
 
-/* HEADER */
+/* PROFILE */
 
 .hero{
   text-align:center;
@@ -105,15 +105,22 @@ h1{
   text-transform:uppercase;
 }
 
-/* PRODUCTS */
+/* PRODUCT GRID */
+
+.product-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:11px;
+}
+
+/* PRODUCT */
 
 .product{
   display:block;
   background:var(--white);
   border:1px solid #e2dccd;
-  border-radius:19px;
+  border-radius:17px;
   overflow:hidden;
-  margin:13px 0;
   text-decoration:none;
   color:var(--text);
   box-shadow:0 5px 18px #0000000b;
@@ -121,59 +128,60 @@ h1{
 
 .product img{
   width:100%;
-  height:205px;
+  height:155px;
   object-fit:cover;
   display:block;
 }
 
 .product-body{
-  padding:16px;
+  padding:12px;
 }
 
 .pill{
   display:inline-block;
-  font-size:9px;
-  letter-spacing:1px;
+  font-size:8px;
+  letter-spacing:.8px;
   font-weight:900;
   color:var(--olive);
   background:#ecebdd;
-  padding:6px 9px;
+  padding:6px 7px;
   border-radius:999px;
 }
 
 .product h3{
-  font-size:17px;
+  font-size:15px;
   line-height:1.3;
-  margin:9px 0 6px;
+  margin:8px 0 5px;
 }
 
 .desc{
-  font-size:13px;
+  font-size:11px;
   color:#777;
-  margin:0 0 10px;
+  margin:0 0 9px;
   line-height:1.4;
 }
 
 .price{
   display:flex;
   align-items:baseline;
-  gap:8px;
-  margin-bottom:11px;
+  gap:5px;
+  flex-wrap:wrap;
+  margin-bottom:8px;
 }
 
 .price strong{
-  font-size:23px;
+  font-size:18px;
 }
 
 .old{
   text-decoration:line-through;
   color:#999;
-  font-size:13px;
+  font-size:11px;
 }
 
 .offer{
   color:var(--green);
-  font-size:12px;
+  font-size:10px;
   font-weight:800;
 }
 
@@ -181,16 +189,23 @@ h1{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  font-size:12px;
-  margin-bottom:13px;
+  gap:4px;
+  font-size:9px;
+  margin-bottom:9px;
 }
 
 .rating{
   background:var(--green);
   color:white;
-  padding:5px 8px;
+  padding:4px 6px;
   border-radius:999px;
   font-weight:800;
+}
+
+.stock{
+  color:#b3261e;
+  font-weight:800;
+  font-size:9px;
 }
 
 .shop{
@@ -198,52 +213,46 @@ h1{
   text-align:center;
   background:var(--brown);
   color:white;
-  border-radius:12px;
-  padding:13px;
+  border-radius:10px;
+  padding:10px 5px;
+  font-size:11px;
   font-weight:900;
 }
 
-.stock{
-  color:#b3261e;
-  font-weight:800;
-  font-size:12px;
-}
+/* CATEGORIES */
 
-/* CATEGORY */
-
-.grid{
+.category-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:11px;
 }
 
-.card{
+.category{
   background:var(--white);
   border:1px solid #e2dccd;
-  border-radius:18px;
-  padding:18px 10px;
+  border-radius:17px;
+  padding:17px 8px;
   text-align:center;
   text-decoration:none;
   color:var(--text);
-  box-shadow:0 5px 18px #0000000b;
 }
 
-.icon{
-  font-size:29px;
-  margin-bottom:7px;
+.category-icon{
+  font-size:28px;
+  margin-bottom:6px;
 }
 
-.card b{
+.category b{
   display:block;
-  font-size:15px;
+  font-size:14px;
 }
 
-.card span{
-  font-size:12px;
+.category span{
+  font-size:11px;
   color:#777;
 }
 
-/* FOLLOW BOX */
+/* FOLLOW */
 
 .feature{
   background:var(--olive);
@@ -296,6 +305,32 @@ h1{
   color:#777;
   margin-top:8px;
 }
+
+/* MOBILE */
+
+@media(max-width:380px){
+
+  .product-grid{
+    gap:8px;
+  }
+
+  .product img{
+    height:135px;
+  }
+
+  .product-body{
+    padding:10px;
+  }
+
+  .product h3{
+    font-size:14px;
+  }
+
+  .desc{
+    font-size:10px;
+  }
+
+}
 </style>
 </head>
 
@@ -334,18 +369,20 @@ h1{
 </div>
 
 
-<!-- PRODUCTS -->
+<!-- TODAY'S FINDS -->
 
 <div id="featured" class="section-title">
   🔥 Shop Today's Finds
 </div>
 
+<div class="product-grid">
 
-<!-- PRODUCT 1 -->
+
+<!-- PRODUCT 1 — LAUNDRY BAG -->
 
 <a
 class="product"
-href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168137?p_id=972719522&ext_id=g34r6q&utm_source=instagram_stories"
+href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168075?p_id=681418625&ext_id=b9p5z5&utm_source=instagram_stories"
 target="_blank">
 
 <img
@@ -355,7 +392,7 @@ alt="Gray Black Laundry Bag">
 <div class="product-body">
 
 <span class="pill">
-🔥 BEST VALUE FIND
+🔥 BEST VALUE
 </span>
 
 <h3>
@@ -385,55 +422,11 @@ SHOP NOW →
 </a>
 
 
-<!-- PRODUCT 2 -->
+<!-- PRODUCT 2 — EARRING HOLDER -->
 
 <a
 class="product"
-href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168229?p_id=208358024&ext_id=3g1u2w&utm_source=instagram_stories"
-target="_blank">
-
-<img
-src="study-lamp.jpg"
-alt="Rechargeable LED Study Lamp">
-
-<div class="product-body">
-
-<span class="pill">
-⭐ TOP RATED FIND
-</span>
-
-<h3>
-Rechargeable LED Touch Study Lamp
-</h3>
-
-<p class="desc">
-Flexible desk lamp with touch on/off control.
-</p>
-
-<div class="price">
-<strong>₹166</strong>
-<span class="old">₹306</span>
-<span class="offer">46% OFF</span>
-</div>
-
-<div class="meta">
-<span class="rating">★ 4.2</span>
-<span>7,326 ratings</span>
-</div>
-
-<span class="shop">
-SHOP NOW →
-</span>
-
-</div>
-</a>
-
-
-<!-- PRODUCT 3 -->
-
-<a
-class="product"
-href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168265?p_id=768602239&ext_id=cplta7&utm_source=instagram_stories"
+href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168137?p_id=972719522&ext_id=g34r6q&utm_source=instagram_stories"
 target="_blank">
 
 <img
@@ -443,7 +436,7 @@ alt="Black Velvet Earring Holder">
 <div class="product-body">
 
 <span class="pill">
-💗 TRENDING FIND
+💗 TRENDING
 </span>
 
 <h3>
@@ -451,7 +444,7 @@ Black Velvet Earring Holder
 </h3>
 
 <p class="desc">
-Jewellery organizer with 16 pairs of earring storage.
+Jewellery organizer with 16 pairs of storage.
 </p>
 
 <div class="price">
@@ -473,18 +466,55 @@ SHOP NOW →
 </a>
 
 
-<!-- MORE FINDS -->
-
-<div class="section-title">
-  💗 More Finds
-</div>
-
-
-<!-- OUT OF STOCK PRODUCT -->
+<!-- PRODUCT 3 — STUDY LAMP -->
 
 <a
 class="product"
-href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168075?p_id=681418625&ext_id=b9p5z5&utm_source=instagram_stories"
+href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168229?p_id=208358024&ext_id=3g1u2w&utm_source=instagram_stories"
+target="_blank">
+
+<img
+src="study-lamp.jpg"
+alt="Rechargeable LED Study Lamp">
+
+<div class="product-body">
+
+<span class="pill">
+⭐ TOP RATED
+</span>
+
+<h3>
+Rechargeable LED Study Lamp
+</h3>
+
+<p class="desc">
+Touch control lamp for study and work.
+</p>
+
+<div class="price">
+<strong>₹166</strong>
+<span class="old">₹306</span>
+<span class="offer">46% OFF</span>
+</div>
+
+<div class="meta">
+<span class="rating">★ 4.2</span>
+<span>7,326 ratings</span>
+</div>
+
+<span class="shop">
+SHOP NOW →
+</span>
+
+</div>
+</a>
+
+
+<!-- PRODUCT 4 — PEARL BAG -->
+
+<a
+class="product"
+href="https://www.meesho.com/af_invite/19514726:instagram_stories:8168265?p_id=768602239&ext_id=cplta7&utm_source=instagram_stories"
 target="_blank">
 
 <img
@@ -494,11 +524,11 @@ alt="Pearl Beaded Clutch Bag">
 <div class="product-body">
 
 <span class="pill">
-FASHION FIND
+✨ FASHION FIND
 </span>
 
 <h3>
-Fancy Korean Designer Pearl Beaded Clutch
+Pearl Beaded Clutch Bag
 </h3>
 
 <p class="desc">
@@ -513,7 +543,7 @@ Elegant pearl-detail bag for women & girls.
 
 <div class="meta">
 <span class="rating">★ 4.3</span>
-<span class="stock">Currently out of stock</span>
+<span class="stock">Check availability</span>
 </div>
 
 <span class="shop">
@@ -523,35 +553,37 @@ CHECK AVAILABILITY →
 </div>
 </a>
 
+</div>
+
 
 <!-- CATEGORIES -->
 
 <div class="section-title">
-  Shop By Category
+  🛍️ Shop By Category
 </div>
 
-<section class="grid">
+<section class="category-grid">
 
-<a class="card" href="#featured">
-<div class="icon">💄</div>
+<a class="category" href="#featured">
+<div class="category-icon">💄</div>
 <b>Beauty Finds</b>
 <span>Beauty picks</span>
 </a>
 
-<a class="card" href="#featured">
-<div class="icon">👗</div>
+<a class="category" href="#featured">
+<div class="category-icon">👗</div>
 <b>Fashion Finds</b>
 <span>Cute & affordable</span>
 </a>
 
-<a class="card" href="#featured">
-<div class="icon">🏠</div>
+<a class="category" href="#featured">
+<div class="category-icon">🏠</div>
 <b>Lifestyle Finds</b>
 <span>Useful picks</span>
 </a>
 
-<a class="card" href="#featured">
-<div class="icon">🏷️</div>
+<a class="category" href="#featured">
+<div class="category-icon">🏷️</div>
 <b>Budget Finds</b>
 <span>Best-value picks</span>
 </a>
@@ -590,7 +622,7 @@ Good finds • Smart buys • Happy shopping 💗
 
 <div class="disclosure">
 Some links may be affiliate links.
-Product prices and availability can change on the shopping platform.
+Prices and availability can change on the shopping platform.
 </div>
 
 <footer class="footer">
